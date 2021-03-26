@@ -1,0 +1,166 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device.width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" contents="ie=edge">
+        <title>Best Online Restaurant | TrEAT.com</title>
+        <link href="{% static 'treat/style.css' %}" rel="stylesheet"  >
+        <link  media="screen and (max-width: 700px)" href="{% static 'treat/phone.css' %}" rel="stylesheet" >
+    </head>
+    <body>
+        <nav id="navbar">
+            <div id="logo">
+                <img src="../../../media/logo.png" alt="TrEAT.com">
+            </div>
+            
+            <ul>
+                <li class="items"><a href="#bg">Home</a></li>
+                <li class="items"><a href="{% url 'order' %}">Menu</a></li>
+                <li class="items"><a href="#Services">Other Services</a></li>
+                <li class="items"><a href="#aboutus">About Us</a></li>
+                <li class="items"><a href="#">Admin Login</a></li>
+            </ul>
+        </nav>
+
+        <section id="bg">
+            
+            <h1 class="h-primary center">Welcome to the TrEAT</h1>
+            <p> TrEAT offers you to order food from a choice of three cuisines i.e; Indian, Chinese and Italian.
+                We also offer our customers a wide range of desserts. 
+                
+            </p>
+            <p>
+                <br>
+                WELCOME <br>
+                Place your order
+ 
+            </p>
+            <button class="button" ><a href="{% url 'order' %}">Order Now</a></button>
+        </section>
+
+
+    <!--   <section id="menu">
+        
+            <h1 class="h-primary">MENU</h1>
+            <p>
+                TrEAT offers you to order food from a choice of three cuisines i.e; Indian, Chinese and Italian.
+                We also offer our customers a wide range of desserts. 
+            </p>
+                
+            <ul>
+                <li class="items"><a href="#">Indian</a></li>
+                <li class="items"><a href="#">Chinese</a></li>
+                <li class="items"><a href="#">Italian</a></li>
+                <li class="items"><a href="#">Desserts</a></li>
+            </ul>
+
+        </section >  -->
+
+
+        <section id="Services">
+            <br>
+            <br>
+            <br>
+            <br>
+            <h1 class="h-primary center"> Other Services </h1>
+            <div id="service">
+                <div class="box">
+                    <img src="../../../media/1.JPG" alt="">
+                    <h2 class="h-secondary center">Food Mess</h2>
+                    <p class="center"> 
+                        we provide best mess facilities in the area. 
+                       
+
+                    </p>
+
+                </div>
+
+                <div class="box">
+                    <img src="../../../media/2.JPG" alt="">
+                    <h2 class="h-secondary center">Catering Services</h2>
+                    <p class="center">
+                        we provide you with the best facilities. 
+                      
+
+                    </p>
+
+                </div>
+
+                <div class="box">
+                    <img src="../../../media/3.JPG" alt="">
+                    <h2 class="h-secondary center">Bulk delievery</h2>
+                    <p class="center"> 
+                        we make the best food in the area. 
+                        
+
+                    </p>
+
+                </div>
+            </div>
+        </section>
+
+<hr>
+
+        <section id="aboutus">
+            
+                <h1 class="h-primary center">About Us</h1>
+                <p class="center">
+                   TrEAT is a multicuisine restaurant<br> which provides great food <br>since 10 years and is among <br>one of the best restaurants in the city.  
+                </p>
+        </section>   
+        
+        <section class="about">
+
+                <h2 class="center1"><u>We provide our guest with</u></h2>
+
+        <hr>
+
+                <div class="box">
+                    <img src="../../../media/menu_images/menu.jpg">
+                    <br>
+                    <h2 class="center">World Class Facility</h2>
+                 
+                </div>
+    
+                <div class="box">
+                    <img src="../../../media/menu_images/menu.jpg">
+                    <br>
+                    <h2 class="center">Fast Delievery</h2>
+                   
+                </div>
+    
+                <div class="box">
+                    <img src="../../../media/menu_images/menu.jpg">
+                    <br>
+                    <h2 class="center">Affordable Prices</h2>
+                
+                </div>
+
+           
+
+             </div>
+
+
+
+        </section>
+
+
+
+    <footer>
+        <div class="center">
+            Copyright &copy; www.trEAT.com. All rights reserved!
+            
+
+        </div>
+    </footer>
+
+
+
+
+
+
+    </body>
+</html>

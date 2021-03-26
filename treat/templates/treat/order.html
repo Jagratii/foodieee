@@ -1,0 +1,113 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Order</title>
+       <link href="{% static 'treat/style.css' %}" rel="stylesheet">
+    </head>
+
+    <body>
+
+                <section >
+                    
+                    <hr>
+
+                    <form method="POST">
+                        {% csrf_token %}
+                    
+                        <section id="item1">
+                            <h1 class="h-secondary">Indian</h1>    
+                            {% for item in indians %}
+                            <div class="row">
+                                
+                                <div class="center">
+                                    <div class="center">
+                                        <div class="center" >
+                                            <input type="checkbox" name="items[]" class="form-check-input" value="{{ item.pk }}">
+                                            <label class="center">{{ item.name }}</label>
+                                        </div>
+                                        <p class="center">{{ item.price }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                            {% endfor %}
+                        </section>
+
+                        <hr>
+
+                        <section id="item2">
+                            <h1 class="h-secondary">Italian</h1>    
+                            {% for item in italians %}
+                            <div class="row">
+                                
+                                
+                                <div class="center">
+                                    <div class="center">
+                                        <div class="center" >
+                                            <input type="checkbox" name="items[]" class="form-check-input" value="{{ item.pk }}">
+                                            <label class="center">{{ item.name }}</label>
+                                        </div>
+                                        <p class="center">{{ item.price }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                            {% endfor %}
+                        </section>
+
+                        <hr>
+
+                        <section id="item3">
+                            <h1 class="h-secondary">Chinese</h1>
+                            {% for item in chineses %}
+                            <div class="row">
+                                
+                               
+                                <div class="center">
+                                    <div class="center">
+                                        <div class="center" >
+                                            <input type="checkbox" name="items[]" class="form-check-input" value="{{ item.pk }}">
+                                            <label class="center">{{ item.name }}</label>
+                                        </div>
+                                        <p class="center">{{ item.price }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                        {% endfor %}
+                        </section>
+
+                        <hr>
+
+                        <section id="item4">
+                            <h1 class="h-secondary">Desserts</h1>
+                            {% for item in desserts %}
+                            <div class="row">
+                                
+                               
+                                <div class="center">
+                                    <div class="center">
+                                        <div class="center" >
+                                            <input type="checkbox" name="items[]" class="form-check-input" value="{{ item.pk }}">
+                                            <label class="center">{{ item.name }}</label>
+                                        </div>
+                                        <p class="center">{{ item.price }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                        {% endfor %}
+                        </section>
+
+
+         
+                        <button class="button">Place Order!</button>
+                    </form>
+
+
+                </section>
+
+    </body>
+</html>
